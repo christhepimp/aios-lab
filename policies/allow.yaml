@@ -1,0 +1,19 @@
+# Phase-0 allowlist. Unknown intents must refuse.
+# Expanding this file is how AIOS grows — not by giving the model raw root.
+
+actions:
+  - id: whoami
+    intents: [who, id]
+    argv: [id]
+  - id: kernel
+    intents: [kernel, uname, os, linux]
+    argv: [uname, "-a"]
+  - id: processes
+    intents: [ps, processes]
+    argv: [ps, "-A"]
+  - id: mounts
+    intents: [mounts]
+    argv: [mount]
+  - id: disk
+    intents: [disk]
+    argv: [df, "-h"]
